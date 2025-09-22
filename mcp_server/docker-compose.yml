@@ -1,6 +1,7 @@
 services:
   neo4j:
     image: neo4j:5.26.0
+    restart: always
     ports:
       - "7474:7474" # HTTP
       - "7687:7687" # Bolt
@@ -23,6 +24,7 @@ services:
 
   graphiti-mcp:
     image: zepai/knowledge-graph-mcp:latest
+    restart: always
     build:
       context: .
       dockerfile: Dockerfile
