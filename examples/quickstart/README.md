@@ -11,7 +11,7 @@ This example demonstrates the basic functionality of Graphiti, including:
 
 ## Prerequisites
 
-- Python 3.9+  
+- Python 3.10+  
 - OpenAI API key (set as `OPENAI_API_KEY` environment variable)  
 - **For Neo4j**:
   - Neo4j Desktop installed and running  
@@ -20,6 +20,12 @@ This example demonstrates the basic functionality of Graphiti, including:
   - FalkorDB server running (see [FalkorDB documentation](https://falkordb.com/docs/) for setup)
 - **For Amazon Neptune**:
   - Amazon server running (see [Amazon Neptune documentation](https://aws.amazon.com/neptune/developer-resources/) for setup)
+
+> **For WSL users:** If you're using Windows Subsystem for Linux, install Python first:
+> ```bash
+> sudo apt update
+> sudo apt install python3 python3-pip python3-venv
+> ```
 
 
 ## Setup Instructions

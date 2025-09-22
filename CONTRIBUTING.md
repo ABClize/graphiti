@@ -57,6 +57,18 @@ Once you've found an issue tagged with "good first issue" or "help wanted," or p
 
    - Ensure you have Python 3.10+ installed.
    - Install uv: https://docs.astral.sh/uv/getting-started/installation/
+   
+   > **For WSL users:** If you're using Windows Subsystem for Linux, run these commands first:
+   > ```bash
+   > # Install Python 3.10+ and required packages
+   > sudo apt update
+   > sudo apt install python3 python3-pip python3-venv
+   > 
+   > # Install uv package manager
+   > curl -LsSf https://astral.sh/uv/install.sh | sh
+   > source ~/.bashrc
+   > ```
+   
    - Install project dependencies:
      ```
      make install

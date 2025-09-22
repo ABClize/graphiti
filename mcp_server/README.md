@@ -67,6 +67,12 @@ cd graphiti && pwd
 2. A running Neo4j database (version 5.26 or later required)
 3. OpenAI API key for LLM operations
 
+> **For WSL users:** If you're using Windows Subsystem for Linux, install Python and system dependencies first:
+> ```bash
+> sudo apt update
+> sudo apt install python3 python3-pip python3-venv
+> ```
+
 ### Setup
 
 1. Clone the repository and navigate to the mcp_server directory

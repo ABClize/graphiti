@@ -141,6 +141,27 @@ docker run -p 6379:6379 -p 3000:3000 -it --rm falkordb/falkordb:latest
 
 ```
 
+### WSL (Windows Subsystem for Linux) Setup
+
+If you're using WSL, you'll need to install Python and uv first:
+
+```bash
+# Install Python 3.10+ (if not already installed)
+sudo apt update
+sudo apt install python3 python3-pip python3-venv
+
+# Install uv package manager
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Add uv to your PATH (restart your terminal or run)
+source ~/.bashrc
+```
+
+> [!NOTE]
+> 如果您在WSL中使用Graphiti，您需要先安装Python 3.10+和uv包管理器。请按照上面的命令进行安装。
+
+### Installing Graphiti
+
 ```bash
 pip install graphiti-core
 ```
