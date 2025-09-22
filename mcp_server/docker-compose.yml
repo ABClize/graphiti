@@ -10,11 +10,14 @@ services:
       - NEO4J_server_memory_heap_initial__size=512m
       - NEO4J_server_memory_heap_max__size=1G
       - NEO4J_server_memory_pagecache_size=512m
+      - TZ=Asia/Shanghai
     volumes:
       - /mnt/docker/neo4j/data:/data
       - /mnt/docker/neo4j/logs:/logs
       - /mnt/docker/neo4j/conf:/var/lib/neo4j/conf
       - /mnt/docker/neo4j/plugins:/plugins
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     healthcheck:
       test: ["CMD", "wget", "-O", "/dev/null", "http://localhost:7474"]
       interval: 10s
@@ -42,6 +45,7 @@ services:
       - MODEL_NAME=${MODEL_NAME}
       - PATH=/root/.local/bin:${PATH}
       - SEMAPHORE_LIMIT=${SEMAPHORE_LIMIT:-10}
+      - TZ=Asia/Shanghai
     ports:
       - "8000:8000" # Expose the MCP server via HTTP for SSE transport
     command: ["uv", "run", "graphiti_mcp_server.py", "--transport", "sse"]
